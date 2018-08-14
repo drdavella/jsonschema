@@ -47,6 +47,10 @@ def additionalProperties(validator, aP, instance, schema):
 
 
 def items(validator, items, instance, schema):
+    print('-' * 10)
+    print(items)
+    print(instance)
+    print(list(zip(enumerate(instance), items)))
     if not validator.is_type(instance, "array"):
         return
 
